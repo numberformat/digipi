@@ -3,7 +3,7 @@ Description=ardopc - ARDOP softmodem for pi
 After=network.target sound.target
 
 [Service]
-ExecStartPre=+systemctl stop fldigi sstv wsjtx tnc300b digipeater tnc node js8call winlinkrms tracker webchat
+ExecStartPre=-+/bin/systemctl stop fldigi sstv wsjtx tnc300b digipeater tnc node js8call winlinkrms tracker webchat
 ExecStart=/home/pi/ardop.sh 
 User=pi
 Restart=no

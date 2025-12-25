@@ -3,7 +3,7 @@ Description=tnc
 After=graphical.target
 
 [Service]
-ExecStartPre=+systemctl stop fldigi sstv wsjtx ardop tnc300b digipeater node winlinkrms js8call tracker
+ExecStartPre=-+/bin/systemctl stop fldigi sstv wsjtx ardop tnc300b digipeater node winlinkrms js8call tracker
 Type=simple
 ExecStart=/home/pi/direwolf.tnc.sh
 Restart=no

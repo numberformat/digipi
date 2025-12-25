@@ -1,0 +1,7 @@
+Original project and implementation:
+
+- Craig (KM6LYW) – original DigiPi design, code, and configuration overlay for Raspberry Pi OS.
+
+Downstream maintainers and contributors:
+
+- Neeraj Verma (KN0AMI) - Renamed project to NOAMi CyberDeck. Introduced install scripts and instructions to help configure the overlay on top of the Raspberry PI OS. Future enhancements to come once project is established.

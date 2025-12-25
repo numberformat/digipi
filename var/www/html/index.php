@@ -1,7 +1,7 @@
 <?php include 'header.php' ?>
 
 
-<?php   
+<?php
 
 $submit = "none";
 
@@ -671,19 +671,19 @@ echo '</td></tr>';
 
 
 #craiger systemd thinks a sigkill is a failure, so reset failed service status
-#This will turn red/failed service into grey/stopped 
-$output = shell_exec('sudo systemctl reset-failed fldigi 2> /dev/null'); 
-$output = shell_exec('sudo systemctl reset-failed sstv 2> /dev/null'); 
-$output = shell_exec('sudo systemctl reset-failed wsjtx 2> /dev/null'); 
-$output = shell_exec('sudo systemctl reset-failed ardop 2> /dev/null'); 
-$output = shell_exec('sudo systemctl reset-failed tnc300b 2> /dev/null'); 
-$output = shell_exec('sudo systemctl reset-failed tracker 2> /dev/null'); 
+#This will turn red/failed service into grey/stopped
+$output = shell_exec('sudo systemctl reset-failed fldigi 2> /dev/null');
+$output = shell_exec('sudo systemctl reset-failed sstv 2> /dev/null');
+$output = shell_exec('sudo systemctl reset-failed wsjtx 2> /dev/null');
+$output = shell_exec('sudo systemctl reset-failed ardop 2> /dev/null');
+$output = shell_exec('sudo systemctl reset-failed tnc300b 2> /dev/null');
+$output = shell_exec('sudo systemctl reset-failed tracker 2> /dev/null');
 $output = shell_exec('sudo systemctl reset-failed digipeater 2> /dev/null');
 $output = shell_exec('sudo systemctl reset-failed tnc 2> /dev/null');
-$output = shell_exec('sudo systemctl reset-failed node 2> /dev/null'); 
-$output = shell_exec('sudo systemctl reset-failed winlinkrms 2> /dev/null'); 
-$output = shell_exec('sudo systemctl reset-failed pat 2> /dev/null'); 
-$output = shell_exec('sudo systemctl reset-failed js8call 2> /dev/null'); 
+$output = shell_exec('sudo systemctl reset-failed node 2> /dev/null');
+$output = shell_exec('sudo systemctl reset-failed winlinkrms 2> /dev/null');
+$output = shell_exec('sudo systemctl reset-failed pat 2> /dev/null');
+$output = shell_exec('sudo systemctl reset-failed js8call 2> /dev/null');
 ?>
 </table>
 
@@ -702,7 +702,7 @@ $output = shell_exec('sudo systemctl reset-failed js8call 2> /dev/null');
   <td width="100px">
     <a href="axcall.php" target="axcall" title="Connect to radio/BBS"><strong>AXCall</strong></a>
   </td>
-  <td width="100px">      
+  <td width="100px">
     <a href="/js8" target="js8" title="Display JS8Call screen"><strong>JS8Call</strong></a>
   </td>
 </tr>
@@ -760,7 +760,7 @@ $output = shell_exec('sudo systemctl reset-failed js8call 2> /dev/null');
   if (!file_exists("/var/cache/digipi/localized.txt")) {
     echo '<tr><td colspan=3><a href="/setup.php" title="REQUIRED!  Enter your callsign and other local information" " target="setup"><font color="green"><strong>Initialize</strong></font></a> </td></tr>';
   }
-?>  
+?>
 
 </table>
 
@@ -771,10 +771,10 @@ $output = shell_exec('sudo systemctl reset-failed js8call 2> /dev/null');
 <form action="index.php" method="post">
     <input type="submit" name="reboot" value="Restart">
     &nbsp;
-    <input type="submit" name="shutdown" value="Shutdown">   
+    <input type="submit" name="shutdown" value="Shutdown">
     &nbsp;
-    <input title="Write current application configurations/logs to SD card" type="submit" name="save" value="Save Configuration">  
-    &nbsp; 
+    <input title="Write current application configurations/logs to SD card" type="submit" name="save" value="Save Configuration">
+    &nbsp;
     <br/><br/>
 
 <table width="400" style="padding-bottom: 3px;" >

@@ -1,0 +1,11 @@
+[Unit]
+Description=conversd
+After=network.target
+
+[Service]
+ExecStart=/usr/local/bin/conversd.sh
+Restart=on-failure
+User=daemon
+
+[Install]
+WantedBy=multi-user.target

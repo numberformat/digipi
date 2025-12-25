@@ -4,7 +4,7 @@ Conflicts=fldigi.service sstv.service wsjtx.service tnc300b.service digipeater.s
 
 
 [Service]
-ExecStartPre=+systemctl stop fldigi sstv wsjtx tnc300b digipeater tnc node js8call tracker webchat
+ExecStartPre=-+/bin/systemctl stop fldigi sstv wsjtx tnc300b digipeater tnc node js8call tracker webchat
 ExecStart=/home/pi/direwolf.winlink.sh
 WorkingDirectory=/home/pi/
 StandardOutput=inherit

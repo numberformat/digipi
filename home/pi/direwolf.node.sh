@@ -49,7 +49,11 @@ sudo mv /tmp/direwolf.node.conf /run/direwolf.node.conf
 
 direwolf -d t -d o -p -q d -t 0 -c /run/direwolf.node.conf |& grep --line-buffered -v PTT_METHOD > /home/pi/direwolf.log &
 
-/home/pi/direwatch.py --save "/run/direwatch.png" --log "/run/direwolf.log" --title_text "ax25 Node" --display $NEWDISPLAYTYPE  &
+  if python3 -c "import digitalio" >/dev/null 2>&1; then
+    /home/pi/direwatch.py --save "/run/direwatch.png" --log "/run/direwolf.log" --title_text "ax25 Node" --display $NEWDISPLAYTYPE  &
+  else
+    echo "digitalio not available; skipping direwatch"
+  fi
 
 sleep 5
 sudo modprobe netrom
@@ -90,4 +94,3 @@ if [ -n "$WINLINKALSO" ]; then
 fi
 sleep 1200
 done
-

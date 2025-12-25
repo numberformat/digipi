@@ -2,7 +2,7 @@
 Description=digipeater
 
 [Service]
-ExecStartPre=+systemctl stop fldigi sstv wsjtx ardop tnc300b tnc node winlinkrms pat js8call tracker
+ExecStartPre=-+/bin/systemctl stop fldigi sstv wsjtx ardop tnc300b tnc node winlinkrms pat js8call tracker
 ExecStart=/home/pi/direwolf.digipeater.sh
 WorkingDirectory=/home/pi/
 StandardOutput=inherit

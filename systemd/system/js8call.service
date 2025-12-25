@@ -3,7 +3,7 @@ Description=js8call
 #Requires=rigctld.service
 
 [Service]
-ExecStartPre=+systemctl stop fldigi tnc sstv wsjtx ardop tnc300b digipeater node winlinkrms pat tracker webchat
+ExecStartPre=-+/bin/systemctl stop fldigi tnc sstv wsjtx ardop tnc300b digipeater node winlinkrms pat tracker webchat
 ExecStart=/home/pi/js8call.sh
 WorkingDirectory=/home/pi/
 StandardOutput=inherit

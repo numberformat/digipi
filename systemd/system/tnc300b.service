@@ -3,7 +3,7 @@ Description=tnc
 After=network.target sound.target
 
 [Service]
-ExecStartPre=+systemctl stop fldigi sstv wsjtx ardop digipeater tnc winlinkrms node js8call tracker
+ExecStartPre=-+/bin/systemctl stop fldigi sstv wsjtx ardop digipeater tnc winlinkrms node js8call tracker
 ExecStart=/home/pi/direwolf.tnc300b.sh
 WorkingDirectory=/home/pi/
 StandardOutput=inherit

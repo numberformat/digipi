@@ -2,7 +2,7 @@
 Description=wsjtx
 
 [Service]
-ExecStartPre=+systemctl stop tnc fldigi sstv ardop tnc300b digipeater node winlinkrms pat js8call tracker webchat
+ExecStartPre=-+/bin/systemctl stop tnc fldigi sstv ardop tnc300b digipeater node winlinkrms pat js8call tracker webchat
 ExecStart=/home/pi/wsjtx.sh
 WorkingDirectory=/home/pi/
 StandardOutput=inherit
